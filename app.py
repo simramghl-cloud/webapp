@@ -94,7 +94,8 @@ def build_agent():
     tools_by_name = {t.name: t for t in tools}
 
     llm = ChatGroq(
-        model="openai/gpt-oss-120b",
+        model="sawera",
+        
         api_key="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",
     )
     llm_with_tools = llm.bind_tools(tools)
