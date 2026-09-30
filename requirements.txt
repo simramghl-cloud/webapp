@@ -14,3 +14,4 @@ docx2txt
 beautifulsoup4
 wikipedia
 torchvision
+Langchain-google_genai
