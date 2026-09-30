@@ -93,13 +93,14 @@ def build_agent():
     wikipedia_tool = WikipediaQueryRun(api_wrapper=WikipediaAPIWrapper())
     tools = [search_my_documents, wikipedia_tool]
     tools_by_name = {t.name: t for t in tools}
-
-    llm = ChatGroq(
-        model="llama-3.3-70b-versatile",
-        
-        api_key="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",
+    llm = ChatGoogleGenerativeAI(
+        model="gemini-2.5-flash",
+        google_api_key=st.secrets["GOOGLE_API_KEY"],
     )
-    llm_with_tools = llm.bind_tools(tools)
+    llm_with_tools = llm.bind_tools(tools)   
+        
+
+    
 
     return llm_with_tools, tools_by_name
 
