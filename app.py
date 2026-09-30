@@ -14,7 +14,8 @@ from langchain_community.vectorstores import FAISS
 from langchain_community.tools import WikipediaQueryRun
 from langchain_community.utilities import WikipediaAPIWrapper
 
-from langchain_groq import ChatGroq
+from langchain_google_genai import chatGoogleGenerativeAI
+
 from langchain_core.messages import HumanMessage, AIMessage, ToolMessage
 from langchain_core.documents import Document
 from langchain_core.tools import tool
